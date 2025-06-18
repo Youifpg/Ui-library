@@ -1,7 +1,9 @@
+local Library = {}
 
 local G2L = {};
 
--- StarterGui.UI_Library
+function Library:CreateWindow(title)
+local Window = {}
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["Name"] = [[UI_Library]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
@@ -53,7 +55,7 @@ G2L["5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["5"]["BackgroundTransparency"] = 1;
 G2L["5"]["Size"] = UDim2.new(0, 167, 0, 22);
 G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5"]["Text"] = [[1mpactfuls Scripts]];
+G2L["5"]["Text"] = title;
 G2L["5"]["Name"] = [[uititle]];
 G2L["5"]["Position"] = UDim2.new(0.41213, 0, 0.12857, 0);
 
@@ -229,11 +231,12 @@ G2L["1a"]["Position"] = UDim2.new(-0.00272, 0, 0, 0);
 G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1a"]["BackgroundTransparency"] = 1;
 
-
+function window:CreateTab(text)
 -- StarterGui.UI_Library.Canvas.Normal_theme.TabButtons.Scrollbtntab.tab_temp.Tabbtn.Frame.UICorner
 G2L["1b"] = Instance.new("UICorner", G2L["1a"]);
 G2L["1b"]["CornerRadius"] = UDim.new(0.08, 5);
 
+	
 
 -- StarterGui.UI_Library.Canvas.Normal_theme.TabButtons.Scrollbtntab.tab_temp.Tabbtn.TextLabel
 G2L["1c"] = Instance.new("TextLabel", G2L["18"]);
@@ -246,7 +249,7 @@ G2L["1c"]["BackgroundTransparency"] = 1;
 G2L["1c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["1c"]["Size"] = UDim2.new(1, 0, 1, 0);
 G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1c"]["Text"] = [[Home Tab]];
+G2L["1c"]["Text"] = text;
 G2L["1c"]["Position"] = UDim2.new(0.6028, 0, 0.5, 0);
 
 
@@ -338,7 +341,7 @@ G2L["25"]["CornerRadius"] = UDim.new(0.02, 5);
 G2L["26"] = Instance.new("UIStroke", G2L["24"]);
 G2L["26"]["Thickness"] = 2;
 G2L["26"]["Color"] = Color3.fromRGB(210, 43, 4);
-
+end
 
 -- StarterGui.UI_Library.Canvas.Normal_theme.TabsHolder
 G2L["27"] = Instance.new("Frame", G2L["3"]);
@@ -380,7 +383,7 @@ G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2a"]["ScrollBarThickness"] = 5;
 G2L["2a"]["BackgroundTransparency"] = 1;
 
-
+function window:CreateButton(text, callback)
 -- StarterGui.UI_Library.Canvas.Normal_theme.TabsHolder.Container.Container 2.scroll.Button
 G2L["2b"] = Instance.new("TextButton", G2L["2a"]);
 G2L["2b"]["BorderSizePixel"] = 0;
@@ -391,8 +394,8 @@ G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(209, 0, 4);
 G2L["2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["2b"]["Size"] = UDim2.new(0, 340, 0, 35);
 G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2b"]["Text"] = [[ Button]];
-G2L["2b"]["Name"] = [[Button]];
+G2L["2b"]["Text"] = text;
+G2L["2b"]["Name"] = text;
 G2L["2b"]["Position"] = UDim2.new(0.06215, 0, 0.01159, 0);
 
 
@@ -423,7 +426,8 @@ G2L["2e"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 G2L["2f"] = Instance.new("UIPadding", G2L["2a"]);
 G2L["2f"]["PaddingTop"] = UDim.new(0, 9);
 
-
+	end
+function window:CreatSection(text)
 -- StarterGui.UI_Library.Canvas.Normal_theme.TabsHolder.Container.Container 2.scroll.Section
 G2L["30"] = Instance.new("TextLabel", G2L["2a"]);
 G2L["30"]["BorderSizePixel"] = 0;
@@ -434,15 +438,16 @@ G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]
 G2L["30"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["30"]["Size"] = UDim2.new(0, 340, 0, 35);
 G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["30"]["Name"] = [[Section]];
+G2L["30"]["Name"] = text;
 G2L["30"]["Position"] = UDim2.new(0, 0, 0.23557, 0);
 
 
 -- StarterGui.UI_Library.Canvas.Normal_theme.TabsHolder.Container.Container 2.scroll.Section.UICorner
 G2L["31"] = Instance.new("UICorner", G2L["30"]);
 G2L["31"]["CornerRadius"] = UDim.new(0.05, 5);
+	end
 
-
+function window:CreateToggle(text, callback)
 -- StarterGui.UI_Library.Canvas.Normal_theme.TabsHolder.Container.Container 2.scroll.Toggle
 G2L["32"] = Instance.new("TextButton", G2L["2a"]);
 G2L["32"]["BorderSizePixel"] = 0;
@@ -453,8 +458,8 @@ G2L["32"]["BackgroundColor3"] = Color3.fromRGB(209, 0, 4);
 G2L["32"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["32"]["Size"] = UDim2.new(0, 340, 0, 35);
 G2L["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["32"]["Text"] = [[ Button]];
-G2L["32"]["Name"] = [[Toggle]];
+G2L["32"]["Text"] = text;
+G2L["32"]["Name"] = text;
 G2L["32"]["Position"] = UDim2.new(0.06215, 0, 0.01159, 0);
 
 
@@ -478,7 +483,7 @@ G2L["34"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
 G2L["34"]["Name"] = [[Element]];
 G2L["34"]["ImageRectOffset"] = Vector2.new(287, 0);
 G2L["34"]["Position"] = UDim2.new(1, 0, 0.5, 0);
--- Attributes
+	end
 G2L["34"]:SetAttribute([[state]], false);
 
 
@@ -628,7 +633,8 @@ G2L["45"] = Instance.new("UICorner", G2L["42"]);
 G2L["45"]["CornerRadius"] = UDim.new(0.08, 5);
 
 
--- StarterGui.UI_Library.Canvas.loadingscreen.Frame.TextLabel
+-- StarterGui.UI_Library.Canvas.loadingscreen.Frame.TextLabe
+function window:CreatLoading(text)
 G2L["46"] = Instance.new("TextLabel", G2L["42"]);
 G2L["46"]["TextWrapped"] = true;
 G2L["46"]["BorderSizePixel"] = 0;
@@ -641,7 +647,7 @@ G2L["46"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["46"]["BackgroundTransparency"] = 1;
 G2L["46"]["Size"] = UDim2.new(0, 193, 0, 50);
 G2L["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["46"]["Text"] = [[ 1mpactfuls Buisness Card loading screen]];
+G2L["46"]["Text"] = text;
 G2L["46"]["Position"] = UDim2.new(0.61289, 0, 0.1004, 0);
 
 
@@ -685,9 +691,9 @@ G2L["4a"]["TextColor3"] = Color3.fromRGB(210, 0, 4);
 G2L["4a"]["BackgroundTransparency"] = 1;
 G2L["4a"]["Size"] = UDim2.new(0, 173, 0, 50);
 G2L["4a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4a"]["Text"] = [[1mpactfuls]];
+G2L["4a"]["Text"] = text;
 G2L["4a"]["Position"] = UDim2.new(0.26074, 0, 0.26452, 0);
-
+end
 
 -- StarterGui.UI_Library.Canvas.loadingscreen.Frame.TextLabel
 G2L["4b"] = Instance.new("TextLabel", G2L["47"]);
@@ -705,6 +711,7 @@ G2L["4b"]["Position"] = UDim2.new(0.03681, 0, 0.00645, 0);
 
 
 -- StarterGui.UI_Library.Canvas.loadingscreen.Frame.TextLabel
+function window:CreatDiscord(text)
 G2L["4c"] = Instance.new("TextLabel", G2L["47"]);
 G2L["4c"]["BorderSizePixel"] = 0;
 G2L["4c"]["TextSize"] = 20;
@@ -715,7 +722,7 @@ G2L["4c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["4c"]["BackgroundTransparency"] = 1;
 G2L["4c"]["Size"] = UDim2.new(0, 73, 0, 50);
 G2L["4c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4c"]["Text"] = [[Discord:]];
+G2L["4c"]["Text"] = text;
 G2L["4c"]["Position"] = UDim2.new(0.03681, 0, 0.4129, 0);
 
 
@@ -730,10 +737,11 @@ G2L["4d"]["TextColor3"] = Color3.fromRGB(210, 0, 4);
 G2L["4d"]["BackgroundTransparency"] = 1;
 G2L["4d"]["Size"] = UDim2.new(0, 173, 0, 50);
 G2L["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4d"]["Text"] = [[x_1mpactfuls.]];
+G2L["4d"]["Text"] = text;
 G2L["4d"]["Position"] = UDim2.new(0.26074, 0, 0.4129, 0);
+end
 
-
+function window:CreatRoblox(text)
 -- StarterGui.UI_Library.Canvas.loadingscreen.Frame.TextLabel
 G2L["4e"] = Instance.new("TextLabel", G2L["47"]);
 G2L["4e"]["BorderSizePixel"] = 0;
@@ -745,7 +753,7 @@ G2L["4e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["4e"]["BackgroundTransparency"] = 1;
 G2L["4e"]["Size"] = UDim2.new(0, 73, 0, 50);
 G2L["4e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4e"]["Text"] = [[Roblox:]];
+G2L["4e"]["Text"] = text;
 G2L["4e"]["Position"] = UDim2.new(0.54294, 0, 0.4129, 0);
 
 
@@ -760,9 +768,9 @@ G2L["4f"]["TextColor3"] = Color3.fromRGB(210, 0, 4);
 G2L["4f"]["BackgroundTransparency"] = 1;
 G2L["4f"]["Size"] = UDim2.new(0, 173, 0, 50);
 G2L["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4f"]["Text"] = [[AgentV4MP]];
+G2L["4f"]["Text"] = text;
 G2L["4f"]["Position"] = UDim2.new(0.73006, 0, 0.4129, 0);
-
+end
 
 -- StarterGui.UI_Library.Canvas.loadingscreen.Frame.TextLabel
 G2L["50"] = Instance.new("TextLabel", G2L["47"]);
@@ -1695,5 +1703,9 @@ local script = G2L["91"];
 	end)
 end;
 task.spawn(C_91);
-
 return G2L["1"], require;
+	
+return window
+end
+
+return Library
