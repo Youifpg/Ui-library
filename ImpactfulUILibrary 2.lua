@@ -249,7 +249,7 @@ G2L["1c"]["BackgroundTransparency"] = 1;
 G2L["1c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["1c"]["Size"] = UDim2.new(1, 0, 1, 0);
 G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1c"]["Text"] = [[Home Tab]];
+G2L["1c"]["Text"] = [[TOUKA TEST]];
 G2L["1c"]["Position"] = UDim2.new(0.6028, 0, 0.5, 0);
 
 
@@ -394,7 +394,7 @@ G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(209, 0, 4);
 G2L["2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["2b"]["Size"] = UDim2.new(0, 340, 0, 35);
 G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2b"]["Text"] = [[ Button]];
+G2L["2b"]["Text"] = [[ TOUKA TEST]];
 G2L["2b"]["Name"] = [[Button]];
 G2L["2b"]["Position"] = UDim2.new(0.06215, 0, 0.01159, 0);
 
@@ -456,7 +456,7 @@ G2L["32"]["BackgroundColor3"] = Color3.fromRGB(209, 0, 4);
 G2L["32"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["32"]["Size"] = UDim2.new(0, 340, 0, 35);
 G2L["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["32"]["Text"] = [[ Button]];
+G2L["32"]["Text"] = [[ TOGLLE TESET TOUKAAAA]];
 G2L["32"]["Name"] = [[Toggle]];
 G2L["32"]["Position"] = UDim2.new(0.06215, 0, 0.01159, 0);
 
